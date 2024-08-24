@@ -1,0 +1,6 @@
+@EgoDevsMarket.API_HostAddress = http://localhost:5151
+
+GET {{EgoDevsMarket.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
