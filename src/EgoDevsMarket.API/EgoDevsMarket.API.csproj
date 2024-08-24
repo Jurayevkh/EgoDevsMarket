@@ -7,13 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EgoDevsMarket.Application\EgoDevsMarket.Application.csproj" />
+    <ProjectReference Include="..\EgoDevsMarket.Infrastructure\EgoDevsMarket.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
