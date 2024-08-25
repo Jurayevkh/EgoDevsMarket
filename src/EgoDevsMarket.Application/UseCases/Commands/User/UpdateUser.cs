@@ -1,9 +1,9 @@
-using EgoDevsMarket.Application.DTO.User;
+using EgoDevsMarket.Domain.Entities.User;
 using MediatR;
 
 namespace EgoDevsMarket.Application.UseCases.Commands.User;
 
-public class UpdateUser:IRequest<UserResultDTO>
+public class UpdateUser:IRequest<Users>
 {
     public int Id{get;set;}
     public string? FirstName {get;set;}

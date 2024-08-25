@@ -1,9 +1,9 @@
-using EgoDevsMarket.Application.DTO.User;
+using EgoDevsMarket.Domain.Entities.User;
 using MediatR;
 
 namespace EgoDevsMarket.Application.UseCases.Commands.User;
 
-public class RegisterUser : IRequest<UserResultDTO>
+public class RegisterUser : IRequest<Users>
 {
     public string FirstName {get;set;}
     public string LastName{get;set;}
