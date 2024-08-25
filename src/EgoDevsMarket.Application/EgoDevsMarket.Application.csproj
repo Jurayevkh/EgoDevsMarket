@@ -20,7 +20,30 @@
 
   <ItemGroup>
     <Folder Include="Abstractions/" />
+    <Folder Include="DTO/Search/" />
+    <Folder Include="Mappers/" />
     <Folder Include="UseCases/" />
+    <Folder Include="UseCases/Commands/" />
+    <Folder Include="UseCases/Commands/Branch/" />
+    <Folder Include="UseCases/Commands/Category/" />
+    <Folder Include="UseCases/Commands/Order/" />
+    <Folder Include="UseCases/Commands/Product/" />
+    <Folder Include="UseCases/Commands/Search/" />
+    <Folder Include="UseCases/Commands/User/" />
+    <Folder Include="UseCases/Handlers/" />
+    <Folder Include="UseCases/Handlers/Branch/" />
+    <Folder Include="UseCases/Handlers/Category/" />
+    <Folder Include="UseCases/Handlers/Order/" />
+    <Folder Include="UseCases/Handlers/Product/" />
+    <Folder Include="UseCases/Handlers/Search/" />
+    <Folder Include="UseCases/Handlers/User/" />
+    <Folder Include="UseCases/Queries/" />
+    <Folder Include="UseCases/Queries/Branch/" />
+    <Folder Include="UseCases/Queries/Category/" />
+    <Folder Include="UseCases/Queries/Order/" />
+    <Folder Include="UseCases/Queries/Product/" />
+    <Folder Include="UseCases/Queries/Search/" />
+    <Folder Include="UseCases/Queries/User/" />
   </ItemGroup>
 
 </Project>
