@@ -21,6 +21,7 @@ public class CreateProductHandler : IRequestHandler<CreateProduct, ProductResult
     public async Task<ProductResultDTO> Handle(CreateProduct request, CancellationToken cancellationToken)
     {
         Products product= _mapper.Map<Products>(request);
+        product.CreatedAt = DateTimeOffset.UtcNow;
         product.SoldQuantity=0;
         await _applicationDbContext.Products.AddAsync(product);
         await _applicationDbContext.SaveChangesAsync(cancellationToken);

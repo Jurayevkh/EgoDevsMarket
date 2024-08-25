@@ -18,7 +18,8 @@ public class RegisterUserHandler : IRequestHandler<RegisterUser, Users>
 
     public async Task<Users> Handle(RegisterUser request, CancellationToken cancellationToken)
     {
-        var user=_mapper.Map<Users>(request);
+        var user= _mapper.Map<Users>(request);
+        user.CreatedAt = DateTimeOffset.UtcNow;
         await _applicationDbContext.Users.AddAsync(user);
         await _applicationDbContext.SaveChangesAsync(cancellationToken);
         return user;

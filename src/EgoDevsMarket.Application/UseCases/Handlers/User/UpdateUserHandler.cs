@@ -32,6 +32,7 @@ public class UpdateUserHandler : IRequestHandler<UpdateUser, Users>
             user.PhoneNumber=request.PhoneNumber;
         if(request.Role != "" || request.Role != null)
             user.Role=request.Role;
+        user.UpdatedAt = DateTimeOffset.UtcNow;
         _applicationDbContext.Users.Update(user);
         await _applicationDbContext.SaveChangesAsync(cancellationToken);
         return user;

@@ -28,6 +28,7 @@ public class UpdateProductHandler : IRequestHandler<UpdateProduct, ProductResult
             product.Description=request.Description;
         if(request.PhotoLink !="" || request.PhotoLink is not null)
             product.PhotoLink=request.PhotoLink;
+        product.UpdatedAt = DateTimeOffset.UtcNow;
         _applicationDbContext.Products.Update(product);
         await _applicationDbContext.SaveChangesAsync(cancellationToken);
         var seller = await _applicationDbContext.Users.FirstOrDefaultAsync(s=>s.Id==product.SellerId);

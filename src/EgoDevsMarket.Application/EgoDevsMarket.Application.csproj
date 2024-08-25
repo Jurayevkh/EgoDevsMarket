@@ -20,10 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Abstractions/" />
-    <Folder Include="DTO/Branch/" />
-    <Folder Include="DTO/Category/" />
-    <Folder Include="DTO/Search/" />
-    <Folder Include="DTO/User/" />
     <Folder Include="UseCases/" />
     <Folder Include="UseCases/Commands/" />
     <Folder Include="UseCases/Commands/Branch/" />

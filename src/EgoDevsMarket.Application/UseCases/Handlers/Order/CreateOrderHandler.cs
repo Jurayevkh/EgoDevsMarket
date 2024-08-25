@@ -21,7 +21,7 @@ public class CreateOrderHandler : IRequestHandler<CreateOrder, OrderResultDTO>
     public async Task<OrderResultDTO> Handle(CreateOrder request, CancellationToken cancellationToken)
     {
         Orders order=_mapper.Map<Orders>(request);
-        order.CreatedAt=DateTime.UtcNow;
+        order.CreatedAt=DateTimeOffset.UtcNow;
         await _applicationDbContext.Orders.AddAsync(order);
         await _applicationDbContext.SaveChangesAsync(cancellationToken);
         var user = await _applicationDbContext.Users.FirstOrDefaultAsync(u=>u.Id ==request.UserId);
